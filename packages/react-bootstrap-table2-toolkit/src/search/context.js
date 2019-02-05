@@ -62,7 +62,7 @@ export default (options = {
             targetValue = targetValue.toString().toLowerCase();
             if (options.multiColumnSearch) {
               const searchTerms = searchText.split(/\s+/);
-              if (searchTerms.find(sT => targetValue.indexOf(sT) > -1)) {
+              if (!searchText.trim() || searchTerms.find(sT => targetValue.indexOf(sT) > -1)) {
                 return true;
               }
             } else if (targetValue.indexOf(searchText) > -1) {
