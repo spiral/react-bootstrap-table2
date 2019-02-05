@@ -5,7 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default (options = {
-  searchFormatted: false
+  searchFormatted: false,
+  multiColumnSearch: false
 }) => (
   _,
   isRemoteSearch,
@@ -59,7 +60,12 @@ export default (options = {
           }
           if (targetValue !== null && typeof targetValue !== 'undefined') {
             targetValue = targetValue.toString().toLowerCase();
-            if (targetValue.indexOf(searchText) > -1) {
+            if (options.multiColumnSearch) {
+              const searchTerms = searchText.split(/\s+/);
+              if (searchTerms.find(sT => targetValue.indexOf(sT) > -1)) {
+                return true;
+              }
+            } else if (targetValue.indexOf(searchText) > -1) {
               return true;
             }
           }

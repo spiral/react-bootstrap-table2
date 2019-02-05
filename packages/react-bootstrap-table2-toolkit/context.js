@@ -18,7 +18,8 @@ class ToolkitProvider extends statelessDrcorator(React.Component) {
       PropTypes.bool,
       PropTypes.shape({
         defaultSearch: PropTypes.string,
-        searchFormatted: PropTypes.bool
+        searchFormatted: PropTypes.bool,
+        multiColumnSearch: PropTypes.bool,
       })
     ]),
     exportCSV: PropTypes.oneOfType([

@@ -95,6 +95,22 @@ If you want to search on the formatted data, you are supposed to enable this pro
 </ToolkitProvider>
 ```
 
+#### multiColumnSearch - [bool]
+Searches not by full query string but splits it in keywords and searches each individually.
+
+```js
+<ToolkitProvider
+  keyField="id"
+  data={ products }
+  columns={ columns }
+  search={ {
+    multiColumnSearch: true
+  } }
+>
+  // ...
+</ToolkitProvider>
+```
+
 ### Clear Search Button
 We have a built-in clear search function which allow user clear search status via clicking button:
 
