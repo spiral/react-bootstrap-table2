@@ -1,6 +1,6 @@
 {
-  "name": "react-bootstrap-table2-toolkit",
-  "version": "1.2.0",
+  "name": "react-bootstrap-table2-toolkit-spiral",
+  "version": "1.2.1",
   "description": "The toolkit for react-bootstrap-table2",
   "main": "./lib/index.js",
   "repository": {
@@ -37,6 +37,10 @@
       "name": "Chun-MingChen",
       "email": "nick830314@gmail.com",
       "url": "https://github.com/Chun-MingChen"
+    },
+    {
+      "name": "Andrew Kirkovski",
+      "email": "ryotsuke@gmail.com",
     }
   ],
   "peerDependencies": {
